@@ -24,7 +24,7 @@ Meteor.call('getEmailsFromInboxStub', function(e, emails) {
 
 Assuming two emails were sent, the code above would show:
 
-```json
+```
 [
  {
    _id: "ACZqWmLejePo9zQQD",
