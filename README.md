@@ -7,10 +7,14 @@ Overrides Meteor's `Email.send` and collects emails into a collection.
 `meteor add xolvio:inbox-stub`
 
 
-###usage
+###Usage
 
-Run an integration / end-to-end test as you normally do, then you can access
-the inbox collection from your test as a json object by hitting:
+Run a through your app manually, or using integration / end-to-end tests and
+emails that are sent from your app will be captured wherever `Email.send` is
+used, such as accounts for verifying emails.
+
+
+To see the sent emails from your console/test as a json object you run:
 
 ```javascript
 Meteor.call('getEmailsFromInboxStub', function(e, emails) {
@@ -43,6 +47,17 @@ In your code, you can then do assertions like:
 
 ```javascript
   emails[0].subject.should.be('Please verify your email address');
+```
+
+Another use for testing is to extract the verification link like this:
+
+```javascript
+
+  // grab the verification link
+  var verificationLink = emails[0].text.match(/(http|https|www)\S+/)[0];
+
+  // then use something like xolvio:webdriver to visit the URL like a user would
+  browser.url(verificationLink)
 ```
 
 This package is a `debugOnly` package and will only be used when developing
