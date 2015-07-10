@@ -1,6 +1,6 @@
-#xolvio:inbox-stub
+#xolvio:stripe-stub
 
-Overrides Meteor's `Email.send` and collects emails into a collection.
+Overrides 
 
 #Get the Book
 To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=inbox-stub&utm_medium=banner&utm_campaign=inbox-stub).
@@ -12,7 +12,7 @@ Your support helps us continue our work on Velocity and related frameworks.
 
 ###Installation
 
-`meteor add xolvio:inbox-stub`
+`meteor add xolvio:email-stub`
 
 
 ###Usage
