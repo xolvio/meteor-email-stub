@@ -1,9 +1,10 @@
-#xolvio:stripe-stub
+#xolvio:email-stub
 
-Overrides 
+Overrides Email 
 
 #Get the Book
-To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=inbox-stub&utm_medium=banner&utm_campaign=inbox-stub).
+To learn more about testing with Meteor, consider purchasing our book
+[The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=inbox-stub&utm_medium=banner&utm_campaign=inbox-stub).
 
 [![](http://www.meteortesting.com/img/tmtm.gif)](http://www.meteortesting.com/?utm_source=inbox-stub&utm_medium=banner&utm_campaign=inbox-stub)
 
@@ -17,15 +18,16 @@ Your support helps us continue our work on Velocity and related frameworks.
 
 ###Usage
 
-Run a through your app manually, or using integration / end-to-end tests and
-emails that are sent from your app will be captured wherever `Email.send` is
-used, such as accounts for verifying emails.
+Run through your app manually, or using integration / end-to-end tests and
+emails that are sent from your app will be captured in a collection (\_emailsCollection)
+whenever `Email.send` is used, such as accounts for verifying emails.
 
 
-To see the sent emails from your console/test as a json object you run:
+To see the sent emails from your console or to use them in tests as a json object
+you run:
 
 ```javascript
-Meteor.call('getEmailsFromInboxStub', function(e, emails) {
+Meteor.call('emailStub/getEmails', function(err, emails) {
   console.log(emails);
 });
 ```
@@ -57,7 +59,7 @@ In your code, you can then do assertions like:
   emails[0].subject.should.be('Please verify your email address');
 ```
 
-Another use for testing is to extract the verification link like this:
+Another use in testing is to extract the verification link as follows:
 
 ```javascript
 
