@@ -19,7 +19,7 @@ Your support helps us continue our work on Velocity and related frameworks.
 ###Usage
 
 Run through your app manually, or using integration / end-to-end tests and
-emails that are sent from your app will be captured in a collection (`\_emailsCollection`)
+emails that are sent from your app will be captured in a collection (`_emailsCollection`)
 whenever `Email.send` is used, such as accounts for verifying emails.
 
 
