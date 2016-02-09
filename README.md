@@ -1,6 +1,6 @@
-#xolvio:stripe-stub
+#xolvio:email-stub
 
-Overrides 
+Stores emails so that they can be referenced by test suite.
 
 #Get the Book
 To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=inbox-stub&utm_medium=banner&utm_campaign=inbox-stub).
@@ -21,13 +21,22 @@ Run a through your app manually, or using integration / end-to-end tests and
 emails that are sent from your app will be captured wherever `Email.send` is
 used, such as accounts for verifying emails.
 
-
-To see the sent emails from your console/test as a json object you run:
-
+Set up
 ```javascript
-Meteor.call('getEmailsFromInboxStub', function(e, emails) {
+Meteor.call('emailStub/stub');
+
+// or running with Chimp
+server.call('emailStub/stub');
+```
+
+Retrieve emails
+```javascript
+Meteor.call('emailStub/getEmails', function(e, emails) {
   console.log(emails);
 });
+
+// or running with Chimp
+let emails = server.call('emailStub/getEmails');
 ```
 
 Assuming two emails were sent, the code above would show:
@@ -70,3 +79,19 @@ Another use for testing is to extract the verification link like this:
 
 This package is a `debugOnly` package and will only be used when developing
 locally.
+
+### Testing lifecycle
+Set up
+```javascript
+Meteor.call('emailStub/stub');
+```
+
+Reset collection
+```javascript
+Meteor.call('emailStub/reset');
+```
+
+Restore and remove stub
+```javascript
+Meteor.call('emailStub/restore');
+```
