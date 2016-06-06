@@ -5,11 +5,6 @@ Stores emails so that they can be referenced by test suite.
 #Get the Book
 To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=inbox-stub&utm_medium=banner&utm_campaign=inbox-stub).
 
-[![](http://www.meteortesting.com/img/tmtm.gif)](http://www.meteortesting.com/?utm_source=inbox-stub&utm_medium=banner&utm_campaign=inbox-stub)
-
-Your support helps us continue our work on Velocity and related frameworks.
-
-
 ###Installation
 
 `meteor add xolvio:email-stub`
