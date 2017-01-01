@@ -17,12 +17,14 @@ emails that are sent from your app will be captured wherever `Email.send` is
 used, such as accounts for verifying emails.
 
 You have 2 options to set up the stub:
+
 1. use `emailStub/stub` to create a "pure stub", meaning that Meteor will NOT
-send out any emails
+send out any emails.
+
 2. use `emailStub/stubAndPassThrough` to create a "passThrough-stub", meaning
 that meteor WILL still send out emails via `Email.send`. This enables you to
 preview your emails during development using tools like
-[MailDev ](https://github.com/djfarrelly/MailDev)
+[MailDev ](https://github.com/djfarrelly/MailDev).
 
 ####Set up "pure stub"
 ```javascript
