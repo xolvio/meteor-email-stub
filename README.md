@@ -26,16 +26,16 @@ that meteor WILL still send out emails via `Email.send`. This enables you to
 preview your emails during development using tools like
 [MailDev ](https://github.com/djfarrelly/MailDev).
 
-####Set up "pure stub"
+####Set up stub
 ```javascript
+// OPTION 1 setup a "pure stub"
 Meteor.call('emailStub/stub');
 
 // or running with Chimp
 server.call('emailStub/stub');
-```
 
-####Set up "passThrough-stub" (and still have meteor send emails via `Email.send`)
-```javascript
+// OPTION 2: setup a "passThrough-stub" (and still have meteor send emails
+// via `Email.send`)
 Meteor.call('emailStub/stubAndPassThrough');
 
 // or running with Chimp
