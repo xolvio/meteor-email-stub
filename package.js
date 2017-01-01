@@ -1,6 +1,6 @@
 Package.describe({
   name: 'xolvio:email-stub',
-  version: '0.2.0',
+  version: '0.3.0',
   summary: 'Allows you to inspect sent emails and assert on their content.',
   git: 'https://github.com/xolvio/meteor-email-stub',
   documentation: null,

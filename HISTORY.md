@@ -1,3 +1,6 @@
+#0.3.0
+* Added option to passThrough the email to `Email.send` via `emailStub/stubAndPassThrough`
+
 #0.2.0
 
 * Renamed the package to xolvio:email-stub to match meteor package name
